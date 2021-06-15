@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://unpkg.com/vue@next"></script>
+    <link href="index.css" rel="stylesheet">
+    <title>Play Bags</title>
+</head>
+<body>
+<div id="app">
+    <!--沙包图片-->
+    <div id="bag" :class="{ burst: end }" ></div>
+
+    <!--进度条-->
+    <div id="bag-health">
+        <div :style="{ width:hp+'%' }"></div>
+    </div>
+
+    <!--按钮-->
+    <div id="controls">
+        <button @click="punch" v-show="!end">使劲敲打</button>
+        <button @click="restart">重新开始</button>
+    </div>
+</div>
+
+</body>
+<script src="index.js"></script>
+</html>
